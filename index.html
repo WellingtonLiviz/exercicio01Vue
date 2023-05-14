@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="vue.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Vue.js</title>
+</head>
+<body>
+
+<main class="grid">
+  <div >
+    <h1>Exercicio 01 Origamid Módulo Vue.js</h1>
+    <img class="img1" src="imagens/exercicio1.png" alt="">
+  </div>
+  
+  <div>
+    <h1> Resolução do Exercicio 01 </h1>
+    <img src="imagens/resolução exercicio1.png" alt="">
+  </div>
+  
+  
+    <!-- Acerte o código abaixo -->
+    
+    <div id="quadrado">
+      <h1>Resolução no Browser </h1>
+
+      <div id="app">
+        {{empresa}}
+        <br>
+        {{produto}}
+      </div>
+
+     <p>Lado: {{lado}} Metros Linear</p>
+     <p>Perimetro do quadrado = {{lado * 4}}</p>
+     <p>Área = {{lado * lado}}m2</p>
+  </div>
+</main>
+
+
+<script>
+const vm = new Vue({
+  el: "#app",
+  data: {
+    empresa: "Apple",
+    produto: "iPhone",
+  }
+});
+</script>
+
+<!-- Crie uma instância que mostre
+baseado no valor do lado do quadrado
+o seu perímetro (lX4) e área (lXl).
+O lado do quadrado deve ser um estado reativo -->
+  
+  <script>
+    const vm2 = new Vue({
+      el: "#quadrado",
+      data: {
+        lado: 30,
+      }
+    })
+  </script>
+
+</body>
+</html>
